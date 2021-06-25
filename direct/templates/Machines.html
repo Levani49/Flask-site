@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - Vehicles {% endblock %}
+
+{% block vehicle %}
+
+    <form action="" method="post" class="row g-3" style="background: cornsilk">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">შეიყვანეთ ავტომობილის სახელი</label>
+        <input type="text" name="carname" placeholder="carname" class="form-control" id="inputEmail4">
+      </div>
+     <div class="col-md-4">
+        <label for="inputState" class="form-label">აირჩიეთ მანქანის ტიპი</label>
+        <select id="inputState" name="cartype" class="form-select">
+          <option selected>სედანი</option>
+          <option>ჯიპი</option>
+          <option>უნივერსალი</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">შეიყვანეთ მანქანის მოდელი</label>
+        <input type="text" name="carmodel" style="width: 30%" aria-place class="form-control" id="inputAddress" placeholder="carmodel">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">შეიყვანეთ ავტომობილის ფერი</label>
+        <input type="text" name="color" style="width: 30%;" class="form-control" id="inputAddress2" placeholder="color">
+      </div>
+     <div class="col-md-4">
+        <label for="inputState" class="form-label">მიუთითეთ ავტომობილის გამოშვების წელი</label>
+        <select id="inputState1" name="makeyear" class="form-select">
+          <option selected>1995</option>
+          <option>1996</option>
+          <option>1997</option>
+          <option>1998</option>
+          <option>1999</option>
+          <option>2000</option>
+          <option>2001</option>
+          <option>2002</option>
+          <option>2003</option>
+          <option>2004</option>
+          <option>2005</option>
+          <option>2006</option>
+          <option>2007</option>
+          <option>2008</option>
+          <option>2009</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+        </select>
+      </div>
+
+          <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">მიუთითეთ მანქანის ფასი</label>
+        <input type="number" name="price" style="width: 30%;" class="form-control" id="inputPassword4">
+      </div>
+
+      <div class="col-12">
+        <button type="submit" style="background: green" class="btn btn-primary">დამატება</button>
+      </div>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+{% endblock %}

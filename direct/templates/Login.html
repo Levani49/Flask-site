@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - Login {% endblock %}
+
+{% block content %}
+ <form method="post" style="width: 30%">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">შეიყვანეთ ელ-ფოსტა</label>
+    <input type="email" name="userMail" placeholder="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <br>
+
+      <label for="exampleInputEmail1" class="form-label">შეიყვანეთ სახელი</label>
+      <input type="text" name="userName" placeholder="username" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">შეიყვანეთ პაროლი</label>
+    <input type="password" placeholder="password" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  </div>
+  <button type="submit" class="btn btn-primary">რეგისტრაცია</button>
+</form>
+{% endblock %}
